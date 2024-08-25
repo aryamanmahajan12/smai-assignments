@@ -47,6 +47,8 @@ An observation depicted in the gif is that degree 3 and 4 have very little diffe
 
 The observations are in the general sense that as the degree of the curves increases, the model fits the 'noise' very well, which is why its performance metrics go down on the testing data. However, for the particular data given, at least up till 20, on randomly sampling the testing data samples, it was founf that error was shooting up on some values like k=16 , hoever even without strict l1 or l2 regularization, we have error decreasing on the testing data.
 
+![Statistical Inference 4](figures/Screenshot%202024-08-25%20235436.png)
+
 
 
 
