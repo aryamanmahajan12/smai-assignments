@@ -17,9 +17,13 @@ The best k was coming around 21 in this implementation along with manhattan dist
 ![Statistical Inference](figures/Screenshot%202024-08-25%20175529.png)
 ![Statistical Inference](figures/Screenshot%202024-08-25%20175354.png)
 
+![Statistical Inference 1](figures/Screenshot%202024-08-25%20233415.png)
 
-![Statistical Inference](figures/Screenshot%202024-08-25%20175627.png)
-![Statistical Inference](figures/Screenshot%202024-08-25%20175627.png)
+![Statistical Inference 2](figures/Screenshot%202024-08-25%20233425.png)
+
+![Statistical Inference 3](figures/Screenshot%202024-08-25%20233438.png)
+
+![Statistical Inference 4](figures/Screenshot%202024-08-25%20233809.png)
 
 ## Question 2
 
