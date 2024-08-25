@@ -31,7 +31,7 @@ The best k was coming around 21 in this implementation along with manhattan dist
 The MSE, Std, and Var are being output on running the file.
 
 ### 3.1.2
-The minimized k has been reported.
+The minimized k has been reported, and it is found that on increasing k, tested here for values from 1 to 5, the error statistics on all 3 tests go down.
 
 ### 3.1.3
 
