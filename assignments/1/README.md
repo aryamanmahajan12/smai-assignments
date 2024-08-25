@@ -38,6 +38,9 @@ The minimized k has been reported.
 The GIF has been made with 5 varying values of k, from k = 1:5. The inference drawn was that on decreasing k, behind the overfitting regime, the error generally decreases. 
 An observation depicted in the gif is that degree 3 and 4 have very little difference in their stastical observations as well as their graphs.
 
+![Statistical Inference 1](linr/animated_presentation.gif)
+
+
 ## Regularization
 
 ### 3.2.1
