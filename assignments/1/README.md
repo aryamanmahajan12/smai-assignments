@@ -13,8 +13,7 @@ Thus they were dropped from th training set altogether from the feature vectors.
 
 The best k was coming around 21 in this implementation along with manhattan distance being the best metric.
 
-![Statistical inferences](assignments/1/figures/Screenshot%202024-08-25%20175627.png)
-
+![Statistical Inference](figures/Screenshot%202024-08-25%20175627.png)
 
 ## Question 2
 
