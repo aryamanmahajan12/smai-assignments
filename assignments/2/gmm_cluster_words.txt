@@ -1,0 +1,24 @@
+GMM Cluster 2: 28 words
+drive, dive, table, bullet, paint, bucket, boat, basket, fish, slide, igloo, clock, oven, skate, book, tattoo, dustbin, tank, airplane, throne, swim, telephone, stove, cook, basketball, wheel, recycle, truck
+
+GMM Cluster 0: 46 words
+sing, listen, flame, knock, brick, smile, bury, download, postcard, hard, fight, call, fly, face, scream, kiss, selfie, catch, hit, far, cry, notebook, sleep, baseball, clean, empty, draw, pray, arrest, email, burn, fire, close, angry, lazy, scary, hang, hammer, enter, happy, loud, love, rainy, arrow, cut, sunny
+
+GMM Cluster 3: 20 words
+deer, carrot, bear, spider, grass, giraffe, forest, monkey, puppy, pear, scissor, mouse, bird, spiderman, bee, tree, beetle, fingerprints, butterfly, bicycle
+
+GMM Cluster 6: 24 words
+panda, helicopter, needle, fishing, shark, lizard, frog, lake, rifle, cow, starfish, van, peacock, flute, ant, goldfish, snake, ambulance, dragonfly, parachute, elephant, toothpaste, windmill, crocodile
+
+GMM Cluster 1: 28 words
+ape, sit, cat, mug, eat, pencil, dig, run, clap, cigarette, sun, sad, fruit, grape, laptop, calendar, buy, calculator, television, camera, tomato, car, pant, toaster, potato, shoe, keyboard, radio
+
+GMM Cluster 5: 11 words
+rose, passport, roof, plant, hollow, saturn, drink, earth, rain, pizza, key
+
+GMM Cluster 7: 17 words
+eraser, gym, stairs, bed, microwave, pull, knit, sweater, microphone, jacket, bench, badminton, chair, pillow, screwdriver, lantern, suitcase
+
+GMM Cluster 4: 26 words
+exit, brush, feather, spoon, bend, puppet, climb, kneel, feet, door, ladder, finger, candle, envelope, toothbrush, teaspoon, length, tent, zip, sword, loudspeaker, knife, comb, walk, fork, paintbrush
+
