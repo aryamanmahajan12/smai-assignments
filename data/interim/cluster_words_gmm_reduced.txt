@@ -1,0 +1,9 @@
+GMM Cluster 1: 58 words
+drive, panda, ape, listen, rose, dive, flame, helicopter, cat, fishing, bear, spider, bullet, shark, mug, frog, fight, fly, face, scream, monkey, passport, cow, hit, microwave, run, clap, microphone, hollow, puppy, clean, empty, fish, mouse, ant, bird, spiderman, bee, fire, close, angry, scary, hang, beetle, skate, hammer, snake, rain, tank, butterfly, elephant, rainy, knife, wheel, windmill, cut, shoe, walk
+
+GMM Cluster 0: 77 words
+sing, sit, knock, table, exit, brick, smile, bury, download, postcard, hard, bend, call, gym, lake, kneel, kiss, selfie, roof, stairs, bed, paint, dig, cry, notebook, sleep, baseball, bench, feet, boat, basket, sad, slide, flute, drink, laptop, door, draw, calendar, chair, ladder, pray, arrest, email, buy, clock, oven, calculator, burn, pillow, lazy, envelope, book, tattoo, earth, fingerprints, ambulance, television, throne, key, camera, car, loudspeaker, happy, telephone, loud, love, stove, cook, basketball, bicycle, recycle, toaster, keyboard, radio, truck, suitcase
+
+GMM Cluster 2: 65 words
+deer, needle, eraser, carrot, grass, giraffe, forest, lizard, brush, feather, eat, spoon, puppet, climb, rifle, catch, pencil, starfish, plant, far, pull, knit, van, sweater, cigarette, jacket, sun, bucket, pear, peacock, saturn, fruit, scissor, grape, badminton, finger, candle, igloo, goldfish, tree, toothbrush, screwdriver, teaspoon, length, dustbin, airplane, pizza, enter, swim, tent, zip, tomato, dragonfly, parachute, sword, lantern, pant, toothpaste, arrow, potato, comb, crocodile, fork, sunny, paintbrush
+

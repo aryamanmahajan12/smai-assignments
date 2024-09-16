@@ -1,0 +1,15 @@
+GMM Cluster 0: 78 words
+drive, listen, rose, dive, flame, knock, needle, exit, bullet, bury, download, feather, eat, hard, spoon, bend, fight, call, fly, face, rifle, hit, far, cry, notebook, sleep, cigarette, hollow, clean, fish, slide, flute, scissor, draw, mouse, pray, arrest, finger, email, buy, bird, clock, oven, calculator, burn, fire, close, angry, scary, hang, envelope, skate, hammer, book, screwdriver, snake, tattoo, earth, fingerprints, rain, tank, pizza, enter, key, zip, sword, happy, loud, love, knife, cook, arrow, comb, cut, shoe, walk, fork, truck
+
+GMM Cluster 2: 31 words
+sing, carrot, brick, fishing, grass, lizard, postcard, puppet, climb, kneel, kiss, passport, catch, paint, plant, pull, knit, sweater, baseball, basket, fruit, drink, badminton, spiderman, lazy, swim, rainy, basketball, keyboard, sunny, radio
+
+GMM Cluster 3: 42 words
+deer, panda, ape, cat, bear, spider, giraffe, forest, frog, gym, monkey, cow, pencil, bed, starfish, dig, run, van, sun, puppy, pear, sad, peacock, saturn, calendar, ant, igloo, goldfish, bee, beetle, camera, tomato, dragonfly, parachute, butterfly, car, lantern, elephant, pant, windmill, potato, crocodile
+
+GMM Cluster 4: 27 words
+helicopter, sit, table, mug, roof, stairs, clap, microphone, jacket, bench, bucket, feet, boat, laptop, door, chair, ladder, pillow, tree, television, throne, tent, loudspeaker, stove, wheel, bicycle, suitcase
+
+GMM Cluster 1: 22 words
+eraser, smile, shark, brush, lake, scream, selfie, microwave, empty, grape, candle, toothbrush, teaspoon, length, dustbin, airplane, ambulance, telephone, toothpaste, recycle, toaster, paintbrush
+

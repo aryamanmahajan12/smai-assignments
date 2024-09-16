@@ -1,0 +1,24 @@
+Cluster 0: 53 words
+drive, sing, rose, dive, sit, exit, smile, eat, postcard, bend, puppet, fly, gym, face, climb, kneel, kiss, passport, selfie, catch, paint, dig, run, clap, pull, cigarette, baseball, basket, drink, door, calendar, arrest, finger, clock, calculator, hammer, tattoo, earth, fingerprints, tank, ambulance, pizza, key, camera, zip, car, basketball, wheel, shoe, walk, sunny, radio, truck
+
+Cluster 4: 13 words
+deer, panda, helicopter, cat, giraffe, rifle, cow, pencil, starfish, peacock, bee, elephant, crocodile
+
+Cluster 6: 19 words
+ape, grass, forest, lake, plant, van, sun, feet, boat, pear, fruit, grape, tree, tomato, lantern, pant, bicycle, windmill, potato
+
+Cluster 3: 34 words
+listen, flame, knock, bury, download, hard, fight, call, hit, far, cry, sleep, clean, sad, slide, draw, pray, email, buy, burn, fire, close, angry, lazy, scary, hang, book, enter, happy, loud, love, cook, recycle, cut
+
+Cluster 7: 22 words
+needle, fishing, brush, feather, spoon, knit, flute, scissor, badminton, toothbrush, screwdriver, teaspoon, length, airplane, parachute, sword, knife, toothpaste, arrow, comb, fork, paintbrush
+
+Cluster 5: 30 words
+eraser, table, brick, mug, roof, stairs, bed, microwave, sweater, microphone, jacket, bench, bucket, laptop, chair, ladder, candle, oven, pillow, envelope, dustbin, television, throne, tent, loudspeaker, telephone, stove, toaster, keyboard, suitcase
+
+Cluster 2: 18 words
+carrot, bear, spider, shark, lizard, frog, monkey, puppy, fish, mouse, ant, goldfish, bird, spiderman, beetle, snake, dragonfly, butterfly
+
+Cluster 1: 11 words
+bullet, scream, notebook, hollow, empty, saturn, igloo, skate, rain, swim, rainy
+
