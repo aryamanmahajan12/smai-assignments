@@ -1,24 +1,24 @@
-Cluster 0: 53 words
-drive, sing, rose, dive, sit, exit, smile, eat, postcard, bend, puppet, fly, gym, face, climb, kneel, kiss, passport, selfie, catch, paint, dig, run, clap, pull, cigarette, baseball, basket, drink, door, calendar, arrest, finger, clock, calculator, hammer, tattoo, earth, fingerprints, tank, ambulance, pizza, key, camera, zip, car, basketball, wheel, shoe, walk, sunny, radio, truck
+Cluster 2: 31 words
+drive, sing, dive, exit, brick, bullet, bend, fly, climb, kneel, kiss, passport, catch, paint, notebook, pull, hollow, empty, slide, tattoo, earth, fingerprints, dustbin, rain, tank, enter, key, swim, rainy, walk, sunny
+
+Cluster 5: 7 words
+deer, bear, puppet, monkey, plant, puppy, bird
+
+Cluster 1: 55 words
+panda, helicopter, eraser, table, mug, gym, roof, stairs, rifle, cow, pencil, bed, microwave, van, sweater, microphone, jacket, bench, sun, bucket, feet, peacock, fruit, laptop, door, calendar, chair, ladder, ant, clock, oven, calculator, bee, pillow, tree, envelope, ambulance, television, throne, tent, camera, parachute, car, loudspeaker, lantern, elephant, stove, wheel, bicycle, windmill, toaster, keyboard, radio, truck, suitcase
+
+Cluster 6: 12 words
+ape, sit, cat, eat, dig, run, clap, sad, zip, tomato, pant, potato
+
+Cluster 3: 37 words
+listen, flame, knock, smile, bury, download, postcard, hard, fight, call, face, selfie, hit, far, cry, sleep, clean, drink, draw, pray, arrest, email, buy, burn, fire, close, angry, lazy, scary, hang, book, happy, loud, love, cook, recycle, cut
+
+Cluster 0: 32 words
+rose, needle, spider, shark, grass, giraffe, forest, lizard, frog, scream, starfish, cigarette, pear, scissor, grape, mouse, finger, candle, igloo, spiderman, beetle, hammer, snake, airplane, pizza, dragonfly, butterfly, sword, telephone, arrow, crocodile, shoe
 
 Cluster 4: 13 words
-deer, panda, helicopter, cat, giraffe, rifle, cow, pencil, starfish, peacock, bee, elephant, crocodile
+carrot, brush, feather, spoon, toothbrush, screwdriver, teaspoon, length, knife, toothpaste, comb, fork, paintbrush
 
-Cluster 6: 19 words
-ape, grass, forest, lake, plant, van, sun, feet, boat, pear, fruit, grape, tree, tomato, lantern, pant, bicycle, windmill, potato
-
-Cluster 3: 34 words
-listen, flame, knock, bury, download, hard, fight, call, hit, far, cry, sleep, clean, sad, slide, draw, pray, email, buy, burn, fire, close, angry, lazy, scary, hang, book, enter, happy, loud, love, cook, recycle, cut
-
-Cluster 7: 22 words
-needle, fishing, brush, feather, spoon, knit, flute, scissor, badminton, toothbrush, screwdriver, teaspoon, length, airplane, parachute, sword, knife, toothpaste, arrow, comb, fork, paintbrush
-
-Cluster 5: 30 words
-eraser, table, brick, mug, roof, stairs, bed, microwave, sweater, microphone, jacket, bench, bucket, laptop, chair, ladder, candle, oven, pillow, envelope, dustbin, television, throne, tent, loudspeaker, telephone, stove, toaster, keyboard, suitcase
-
-Cluster 2: 18 words
-carrot, bear, spider, shark, lizard, frog, monkey, puppy, fish, mouse, ant, goldfish, bird, spiderman, beetle, snake, dragonfly, butterfly
-
-Cluster 1: 11 words
-bullet, scream, notebook, hollow, empty, saturn, igloo, skate, rain, swim, rainy
+Cluster 7: 13 words
+fishing, lake, knit, baseball, boat, basket, fish, saturn, flute, badminton, goldfish, skate, basketball
 
