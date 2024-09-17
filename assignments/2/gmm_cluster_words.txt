@@ -1,24 +1,24 @@
-GMM Cluster 4: 18 words
-drive, sing, table, call, scream, kiss, cigarette, microphone, calculator, tattoo, fingerprints, tank, throne, loudspeaker, telephone, bicycle, keyboard, radio
+GMM Cluster 7: 18 words
+drive, sing, dive, lake, catch, clap, sleep, hollow, empty, fish, slide, arrest, skate, earth, rain, enter, swim, rainy
 
-GMM Cluster 3: 21 words
-deer, panda, ape, rose, bear, spider, shark, giraffe, forest, lizard, frog, climb, monkey, fish, mouse, bird, angry, tree, snake, elephant, sunny
+GMM Cluster 2: 34 words
+deer, panda, ape, cat, bear, shark, giraffe, mug, eat, frog, gym, monkey, rifle, cow, plant, dig, run, pull, van, sun, puppy, sad, fruit, grape, ant, bee, television, camera, tomato, car, elephant, pant, potato, crocodile
 
-GMM Cluster 1: 39 words
-listen, flame, knock, exit, bullet, bury, download, postcard, hard, face, selfie, hit, far, cry, notebook, sleep, clean, empty, slide, drink, laptop, draw, calendar, pray, email, burn, fire, close, lazy, scary, hang, envelope, book, earth, happy, loud, love, recycle, cut
+GMM Cluster 6: 42 words
+listen, flame, knock, smile, bury, download, postcard, hard, fight, call, face, passport, selfie, hit, far, cry, notebook, clean, basket, drink, draw, calendar, pray, email, buy, burn, fire, close, angry, lazy, scary, hang, book, tattoo, pizza, key, happy, loud, love, cook, cut, radio
 
-GMM Cluster 5: 18 words
-dive, brick, roof, microwave, sweater, hollow, boat, pear, igloo, clock, oven, dustbin, pizza, television, stove, cook, toaster, truck
+GMM Cluster 0: 22 words
+rose, helicopter, spider, bullet, forest, lizard, feather, fly, scream, kiss, mouse, goldfish, bird, spiderman, beetle, snake, airplane, dragonfly, parachute, butterfly, arrow, sunny
 
-GMM Cluster 7: 33 words
-helicopter, needle, fishing, lake, passport, bed, starfish, baseball, jacket, basket, peacock, saturn, fruit, grape, goldfish, spiderman, pillow, beetle, rain, airplane, ambulance, tent, dragonfly, parachute, butterfly, lantern, rainy, basketball, wheel, windmill, arrow, crocodile, suitcase
+GMM Cluster 4: 23 words
+sit, table, bend, pencil, bed, microphone, bench, feet, boat, pear, peacock, laptop, chair, pillow, tree, envelope, length, ambulance, throne, tent, bicycle, keyboard, truck
 
-GMM Cluster 6: 35 words
-sit, cat, smile, mug, eat, fight, fly, gym, rifle, catch, cow, pencil, paint, dig, run, clap, pull, van, sun, feet, sad, arrest, ant, buy, bee, enter, swim, camera, zip, tomato, car, pant, potato, shoe, walk
+GMM Cluster 1: 26 words
+needle, carrot, brick, fishing, grass, brush, spoon, puppet, kneel, paint, knit, sweater, cigarette, baseball, jacket, scissor, badminton, finger, candle, toothbrush, screwdriver, zip, telephone, knife, fork, paintbrush
 
-GMM Cluster 2: 31 words
-eraser, carrot, grass, brush, feather, spoon, bend, stairs, knit, bench, flute, scissor, door, badminton, chair, ladder, finger, candle, skate, hammer, toothbrush, screwdriver, teaspoon, length, key, sword, knife, toothpaste, comb, fork, paintbrush
+GMM Cluster 3: 23 words
+eraser, exit, climb, roof, stairs, starfish, saturn, flute, door, ladder, igloo, clock, calculator, hammer, teaspoon, sword, lantern, basketball, wheel, windmill, comb, shoe, walk
 
-GMM Cluster 0: 5 words
-puppet, kneel, plant, bucket, puppy
+GMM Cluster 5: 12 words
+microwave, bucket, oven, fingerprints, dustbin, tank, loudspeaker, stove, toothpaste, recycle, toaster, suitcase
 

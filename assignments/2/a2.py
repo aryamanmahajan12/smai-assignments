@@ -779,7 +779,7 @@ for metric in distance_metrics:
 
 
 """------------------------------------------------------------------------------PCA + KNN----------------------------------------------------------------------------"""
-
+import time
 
 def calculate_precision_recall_f1(y_true, y_pred):
     labels = np.unique(y_true)
@@ -891,35 +891,30 @@ plt.show()
 
 print(f"Number of components needed to explain 90% of the variance: {n_components_90}")
 
-# Reduce the dataset using PCA
-pca_90 = PCA(n_comps=n_components_90)  # Adjust this line based on your PCA class initialization
-pca_90.fit(X_train_scaled)
-X_train_pca = pca_90.transform(X_train_scaled)  # Adjust this line based on your PCA class methods
 
-# Set y_train as the last column from the original CSV file
+pca_90 = PCA(n_comps=n_components_90) 
+pca_90.fit(X_train_scaled)
+X_train_pca = pca_90.transform(X_train_scaled)  
+
 y_train = train_sp.iloc[:, -1].values
 
-# Normalize the PCA-reduced dataset
 X_train_normalized = min_max_normalize(X_train_pca)
 
-# Prepare validation data
 X_val = val_sp[numeric_columns].values
 X_val_scaled = (X_val - train_mean) / train_std
-X_val_pca = pca_90.transform(X_val_scaled)  # Adjust this line based on your PCA class methods
+X_val_pca = pca_90.transform(X_val_scaled)
 X_val_normalized = min_max_normalize(X_val_pca)
 y_val = val_sp.iloc[:, -1].values
 Xtbu = X_train_normalized[:100]
 ytbu = y_train[:100]
 xvalu = X_val_normalized[:100]
 yvalu = y_val[:100]
-# Initialize and train the KNN model
+
 knn = KNN(k=5, distance_metric='cosine')
 knn.fit(Xtbu, ytbu)
-
-# Make predictions on the validation set
+s = time.time()
 y_pred = knn.predict(xvalu)
-
-# Calculate and print the accuracy
+e = time.time()
 accuracy = calculate_accuracy(yvalu, y_pred)
 print(f"Accuracy: {accuracy:.4f}")
 precision, recall, f1 = calculate_precision_recall_f1(yvalu, y_pred)
