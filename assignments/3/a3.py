@@ -3,6 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from sklearn.impute import SimpleImputer
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import classification_report, confusion_matrix
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
@@ -13,22 +15,29 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '.
 
 wine = pd.read_csv(r"C:\Users\aryma\Desktop\SMAI\smai\smai-m24-assignments-aryamanmahajan123\data\external\WineQT.csv")
 
-x,y = wine.shape
+# Get the number of records and features
+num_records, num_features = wine.shape
+print(f"Number of records  : {num_records}")
+print(f"Number of features : {num_features}")
 
-print(f"Number of records  : {x}")
-print(f"Number of features : {y}")
+# Display statistics for each feature
+for i in range(1, num_features): 
+    print(f"\nAttribute  =  {wine.columns[i]}")
+    print(f"Mean    : {wine.iloc[:, i].mean():.2f}")  
+    print(f"Max     : {wine.iloc[:, i].max():.2f}")   
+    print(f"Min     : {wine.iloc[:, i].min():.2f}") 
+    print(f"Std Dev : {wine.iloc[:, i].std():.2f}")
 
-for i in range(1, y):  
-    print(f"Attribute  =  {wine.columns[i]}")
-    print(f"Mean    : {np.mean(wine.iloc[:, i])}")  
-    print(f"Max     : {np.max(wine.iloc[:, i])}")   
-    print(f"Min     : {np.min(wine.iloc[:,i])}") 
-    print(f"Std Dev : {np.std(wine.iloc[:,i])}")
-
+# Count occurrences of each quality label
 label_counts = wine['quality'].value_counts()
+print("\nLabel Counts:")
+print(label_counts)
+
+# Create output directory for plots
 output_dir = os.path.join(os.path.dirname(__file__), 'plots')
 os.makedirs(output_dir, exist_ok=True)
 
+# Plot distribution of labels in dataset
 plt.figure(figsize=(10, 6))
 label_counts.plot(kind='bar', color='skyblue')
 plt.title('Distribution of Labels in Dataset')
@@ -37,26 +46,42 @@ plt.ylabel('Frequency')
 plt.xticks(rotation=45)
 plt.grid(axis='y')
 plt.savefig(os.path.join(output_dir, 'label_distribution.png'))
-
-
 plt.tight_layout()
 plt.show()
 
-imputer = SimpleImputer(strategy='mean')
-wine_imputed = pd.DataFrame(imputer.fit_transform(wine), columns=wine.columns)
+wine.dropna(inplace=True)
 
-min_max_scaler = MinMaxScaler()
-normalized_data = min_max_scaler.fit_transform(wine_imputed)
+X = wine.drop('quality', axis=1) 
+y = wine['quality'].values          
 
-normalized_df = pd.DataFrame(normalized_data, columns=wine_imputed.columns)
+print(f"y len : {len(y.shape)}")
 
-standard_scaler = StandardScaler()
-standardized_data = standard_scaler.fit_transform(wine_imputed)
 
-standardized_df = pd.DataFrame(standardized_data, columns=wine_imputed.columns)
+class_counts = pd.Series(y).value_counts()
+print("\nClass Distribution:")
+print(class_counts)
 
-print("Normalized Data:")
-print(normalized_df.head())
+if (class_counts < 2).any():
+    print("Warning: One or more classes have fewer than 2 instances.")
 
-print("\nStandardized Data:")
-print(standardized_df.head())
+normalizer = MinMaxScaler()
+X_normalized = normalizer.fit_transform(X)
+standardizer = StandardScaler()
+X_standardized = standardizer.fit_transform(X_normalized)
+
+X_train, X_temp, y_train, y_temp = train_test_split(X_standardized, y, test_size=0.2, random_state=42)
+
+X_val, X_test, y_val, y_test = train_test_split(X_temp, y_temp, test_size=0.5, random_state=42)
+
+print(f"\nTraining set shape: {X_train.shape}, {y_train.shape}")
+print(f"Validation set shape: {X_val.shape}, {y_val.shape}")
+print(f"Test set shape: {X_test.shape}, {y_test.shape}")
+
+print("\nTraining Labels Distribution:")
+print(pd.Series(y_train).value_counts(normalize=True))
+
+print("\nValidation Labels Distribution:")
+print(pd.Series(y_val).value_counts(normalize=True))
+
+print("\nTest Labels Distribution:")
+print(pd.Series(y_test).value_counts(normalize=True))
