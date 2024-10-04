@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from sklearn.impute import SimpleImputer
 from sklearn.model_selection import train_test_split
@@ -9,7 +10,7 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
-
+from models.MLP.MLP import MLPClassifier
 
 """----------------------------------------------DATASET ANALYSIS AND PREPROCESSING--------------------------------------------------------"""
 
@@ -85,3 +86,26 @@ print(pd.Series(y_val).value_counts(normalize=True))
 
 print("\nTest Labels Distribution:")
 print(pd.Series(y_test).value_counts(normalize=True))
+
+
+
+"""-----------------------------------------------------Testing The Model----------------------------------------------------------------"""
+
+
+
+mlp = MLPClassifier(hidden_layers=[64, 64], learning_rate=0.1, activation='relu', 
+                 optimizer='sgd', batch_size=32, epochs=1000)
+
+mlp.fit(X_train,y_train,X_val,y_val)
+y_val_pred = mlp.predict(X_val)
+print(y_val_pred)
+print(y_val)
+plt.figure(figsize=(10, 8))
+cm = confusion_matrix(y_val, y_val_pred)
+sns.heatmap(cm, annot=True, fmt='d', cmap='Blues')
+plt.title('Confusion Matrix')
+plt.xlabel('Predicted')
+plt.ylabel('Actual')
+plt.savefig(os.path.join(output_dir, 'confusion_matrix.png'))
+plt.tight_layout()
+plt.show()
