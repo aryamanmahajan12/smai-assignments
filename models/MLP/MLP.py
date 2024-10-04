@@ -1,4 +1,6 @@
 import numpy as np
+import wandb
+from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
 
 class MLPClassifier:
 
@@ -14,6 +16,17 @@ class MLPClassifier:
         self.biases = []
         self.label_map = None
         self.inverse_label_map = None
+
+
+        # Initialize W&B
+        wandb.init(project="mlp-hyperparameter-tuning", config={
+            "hidden_layers": hidden_layers,
+            "learning_rate": learning_rate,
+            "activation": activation,
+            "optimizer": optimizer,
+            "batch_size": batch_size,
+            "epochs": epochs
+        })
         
     def _initialize_parameters(self, input_size, output_size):
         layer_sizes = [input_size] + self.hidden_layers + [output_size]
@@ -103,42 +116,44 @@ class MLPClassifier:
             else:
                 raise ValueError("Unsupported optimizer")
     
-    def fit(self, X, y):
-        # Create label mapping
-        unique_labels = np.unique(y)
+    def fit(self, X_train, y_train, X_val, y_val):
+        unique_labels = np.unique(y_train)
         self.label_map = {label: i for i, label in enumerate(unique_labels)}
         self.inverse_label_map = {i: label for label, i in self.label_map.items()}
         
-        input_size = X.shape[1]
+        input_size = X_train.shape[1]
         output_size = len(unique_labels)
         self._initialize_parameters(input_size, output_size)
         
-        y_encoded = self._encode_labels(y)
-        y_onehot = self._onehot_encode(y_encoded)
+        y_encoded_train = self._encode_labels(y_train)
+        y_onehot_train = self._onehot_encode(y_encoded_train)
+
+        y_encoded_val = self._encode_labels(y_val)
+        y_onehot_val = self._onehot_encode(y_encoded_val)
         
         best_loss = float('inf')
         patience = 10
         counter = 0
-        
+
         for epoch in range(self.epochs):
             if self.optimizer == 'batch':
-                y_pred = self.forward_propagation(X)
-                self.backpropagation(X, y_onehot, y_pred)
+                y_pred_train = self.forward_propagation(X_train)
+                self.backpropagation(X_train, y_onehot_train, y_pred_train)
                 self.update_parameters()
             elif self.optimizer in ['sgd', 'mini-batch']:
-                indices = np.arange(X.shape[0])
+                indices = np.arange(X_train.shape[0])
                 np.random.shuffle(indices)
-                for start_idx in range(0, X.shape[0], self.batch_size):
+                for start_idx in range(0, X_train.shape[0], self.batch_size):
                     batch_indices = indices[start_idx:start_idx+self.batch_size]
-                    X_batch = X[batch_indices]
-                    y_batch = y_onehot[batch_indices]
+                    X_batch = X_train[batch_indices]
+                    y_batch = y_onehot_train[batch_indices]
                     
                     y_pred_batch = self.forward_propagation(X_batch)
                     self.backpropagation(X_batch, y_batch, y_pred_batch)
                     self.update_parameters()
-            
+
             # Early stopping
-            current_loss = self._compute_loss(X, y_onehot)
+            current_loss = self._compute_loss(X_train, y_onehot_train)
             if current_loss < best_loss:
                 best_loss = current_loss
                 counter = 0
@@ -147,10 +162,32 @@ class MLPClassifier:
                 if counter >= patience:
                     print(f"Early stopping at epoch {epoch}")
                     break
-            
+
+            # Calculate validation metrics
+            y_pred_train = self.predict(X_train)
+            y_pred_val = self.predict(X_val)
+
+            train_accuracy = accuracy_score(y_train, y_pred_train)
+            val_accuracy = accuracy_score(y_val, y_pred_val)
+            val_precision = precision_score(y_val, y_pred_val, average='weighted')
+            val_recall = recall_score(y_val, y_pred_val, average='weighted')
+            val_f1 = f1_score(y_val, y_pred_val, average='weighted')
+
+            # Log metrics to W&B
+            wandb.log({
+                "epoch": epoch,
+                "train_loss": current_loss,
+                "train_accuracy": train_accuracy,
+                "val_accuracy": val_accuracy,
+                "val_precision": val_precision,
+                "val_recall": val_recall,
+                "val_f1": val_f1
+            })
+
             if epoch % 10 == 0:
-                print(f"Epoch {epoch}, Loss: {current_loss}")
+                print(f"Epoch {epoch}, Train Loss: {current_loss}, Val Accuracy: {val_accuracy}")
     
+
     def predict(self, X):
         probabilities = self.forward_propagation(X)
         predicted_indices = np.argmax(probabilities, axis=1)
@@ -158,12 +195,10 @@ class MLPClassifier:
     
     def _encode_labels(self, y):
         return np.array([self.label_map[label] for label in y])
-    
+        
     def _onehot_encode(self, y):
-        if len(y.shape) == 1:
-            n_classes = len(np.unique(y))
-            return np.eye(n_classes)[y]
-        return y
+        n_classes = len(self.label_map)
+        return np.eye(n_classes)[y]
     
     def _compute_loss(self, X, y):
         y_pred = self.forward_propagation(X)
